@@ -1,9 +1,112 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
 	"version": "0.1.0",
-	"id": "YourPreferredAlias.AnIDForTheMod",
-	"name": "Test Mod",
-	"description": "A truly amazing mod",
-	"authors": ["Your Preferred Alias"],
-	"frameworkVersion": "2.25.1"
+	"id": "Cyb.PickPlant",
+	"name": "Pickpocket & Plant Mod",
+	"description": "Enables 47 to pickpocket and plant items on NPCs.",
+	"authors": ["Cyb"],
+	"contentFolders": [
+		"content-default"
+	],
+	"frameworkVersion": "2.33.24",
+	"options": [
+		{
+			"name": "Easier Timing",
+			"type": "checkbox",
+			"tooltip": "Looser timing for pick/plant prompts.",
+			"enabledByDefault": false,
+			"contentFolders": ["content-loose"]
+		},
+		{
+			"name": "Pickpocket",
+			"type": "select",
+			"tooltip": "Default prompt",
+			"group": "Pickpocket|Swipe|Steal",
+			"enabledByDefault": true,
+			"localisedLines": {
+				"0005484A3817178F": "UI_CYB_PICKA"
+			},
+			"localisation": {
+				"english": {
+				"UI_CYB_PICKA": "Pickpocket"
+				}
+			}
+		},
+		{
+			"name": "Swipe",
+			"type": "select",
+			"tooltip": "Default prompt",
+			"group": "Pickpocket|Swipe|Steal",
+			"enabledByDefault": false,
+			"localisedLines": {
+				"0005484A3817178F": "UI_CYB_PICKA"
+			},
+			"localisation": {
+				"english": {
+				"UI_CYB_PICKA": "Swipe"
+				}
+			}
+		},
+		{
+			"name": "Steal",
+			"type": "select",
+			"tooltip": "Default prompt",
+			"group": "Pickpocket|Swipe|Steal",
+			"enabledByDefault": false,
+			"localisedLines": {
+				"0005484A3817178F": "UI_CYB_PICKA"
+			},
+			"localisation": {
+				"english": {
+				"UI_CYB_PICKA": "Steal"
+				}
+			}
+		},
+		{
+			"name": "Plant",
+			"type": "select",
+			"tooltip": "Default prompt",
+			"group": "Plant|Stash|PutPocket",
+			"enabledByDefault": true,
+			"localisedLines": {
+				"00772432E26EA221": "UI_CYB_PLANTA"
+			},
+			"localisation": {
+				"english": {
+				"UI_CYB_PLANTA": "Plant"
+				}
+			}
+		},
+		{
+			"name": "Stash",
+			"type": "select",
+			"tooltip": "Default prompt",
+			"group": "Plant|Stash|PutPocket",
+			"enabledByDefault": false,
+			"localisedLines": {
+				"00772432E26EA221": "UI_CYB_PLANTA"
+			},
+			"localisation": {
+				"english": {
+				"UI_CYB_PLANTA": "Stash"
+				}
+			}
+		},
+		{
+			"name": "PutPocket",
+			"type": "select",
+			"tooltip": "Default prompt",
+			"group": "Plant|Stash|PutPocket",
+			"enabledByDefault": false,
+			"localisedLines": {
+				"00772432E26EA221": "UI_CYB_PLANTA"
+			},
+			"localisation": {
+				"english": {
+				"UI_CYB_PLANTA": "PutPocket"
+				}
+			}
+		}
+	],
+	"updateCheck": "https://github.com/Cybore8/soapbox/releases/latest/download/updates.json"
 }

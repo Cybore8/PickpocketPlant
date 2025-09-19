@@ -1,0 +1,25 @@
+{
+	"tempHash": "00703841B95F0395",
+	"tbluHash": "00581FEFCA528138",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafea42dd05707a5",
+				{
+					"parent": "c7d09820d6a4e10c",
+					"name": "keyword_ITEMRULE_LEGAL",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_itemrule_legal.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keyworditems.template?/keyword_itemrule_legal.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aHolders": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["c7d09820d6a4e10c"],
+							"postInit": true
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

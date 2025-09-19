@@ -1,0 +1,356 @@
+{
+	"tempHash": "008A49AD4EC3A052",
+	"tbluHash": "000507E5081D979D",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"2f42b1aae3ea68c6",
+				{
+					"AddEventConnection": [
+						"OnTriggered",
+						"In",
+						"cafe89853ae7c723"
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"2f42b1aae3ea68c6",
+				{
+					"AddEventConnection": [
+						"OnTriggered",
+						"TransmitEvent",
+						"cafe27e99621814c"
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe25fddc3ae82e",
+				{
+					"parent": "de81c010ddfcf0e1",
+					"name": "Stash",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe9b5fb2f8c00e",
+				{
+					"parent": "cafedeec7498c65c",
+					"name": "Cyb_NPCStashed",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sName": {
+							"type": "ZString",
+							"value": "Cyb_NPCStashed"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafed57c0b2ff80c",
+				{
+					"parent": "cafedeec7498c65c",
+					"name": "Cyb_EventChannelReceiver_void_02 Destroyed",
+					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rChannelToken": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe9b5fb2f8c00e"
+						}
+					},
+					"events": {
+						"EventReceived": { "Enable": ["cafefdbf6289bd99"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafedeec7498c65c",
+				{
+					"parent": "cafe25fddc3ae82e",
+					"name": "Void_Receive",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef72341cee8d8",
+				{
+					"parent": "cafe2c1df7af5fa7",
+					"name": "Cyb_NPCStashDrop",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sName": {
+							"type": "ZString",
+							"value": "Cyb_NPCStashDrop"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe2c1df7af5fa7",
+				{
+					"parent": "cafe25fddc3ae82e",
+					"name": "Void_Transmit",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe27e99621814c",
+				{
+					"parent": "cafe2c1df7af5fa7",
+					"name": "Cyb_EventChannelTransmitter_void_01",
+					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rChannelToken": {
+							"type": "SEntityTemplateReference",
+							"value": "cafef72341cee8d8",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafee09ff5d86d8b",
+				{
+					"parent": "de81c010ddfcf0e1",
+					"name": "Timer",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafefdbf6289bd99",
+				{
+					"parent": "cafee09ff5d86d8b",
+					"name": "VolumeTriggerKeyword Remote",
+					"factory": "[assembly:/templates/markup/volumetrigger.template?/volumetriggerkeyword.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/templates/markup/volumetrigger.template?/volumetriggerkeyword.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_bEnabled": { "type": "bool", "value": false },
+						"m_TriggerOnlyOnVisible": {
+							"type": "bool",
+							"value": false
+						},
+						"m_TriggerOnOverlap": {
+							"type": "bool",
+							"value": true
+						},
+						"m_Spheres": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["cafed7827ef2a16c"],
+							"postInit": true
+						},
+						"m_rKeywords": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe7bb664e8ed1f",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe7bb664e8ed1f",
+				{
+					"parent": "cafefdbf6289bd99",
+					"name": "Keyword_WEAPON_DELIVERYTYPE_REMOTE",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_deliverytype_remote.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordweapondescriptors.template?/keyword_weapon_deliverytype_remote.entitytemplate].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe55f5ae3dac3e",
+				{
+					"parent": "cafee09ff5d86d8b",
+					"name": "Poll - Keyword",
+					"factory": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic/valuebool.template?/valuebool_poll.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rValueEntity": {
+							"type": "SEntityTemplateReference",
+							"value": "cafefdbf6289bd99"
+						}
+					},
+					"events": {
+						"PollTrue": {
+							"SendMessagex": ["cafe5360ef352e44"],
+							"In": ["cafeb787f8541518"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe5360ef352e44",
+				{
+					"parent": "cafee09ff5d86d8b",
+					"name": "Active VitalInfoBarMessage - Resort Staff",
+					"factory": "[modules:/zvitalinfobarmessageentity.class].pc_entitytype",
+					"blueprint": "[modules:/zvitalinfobarmessageentity.class].pc_entityblueprint",
+					"properties": {
+						"m_TextLine": {
+							"type": "ZRuntimeResourceID",
+							"value": {
+								"resource": "[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_npcs_stingray.sweetmenutext?/stingray_worker_resortstaff_f_description_0039b0cc-022e-489b-95f8-9a7fa044aae8.sweetline].pc_sweetline",
+								"flag": "5F"
+							}
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafeb787f8541518",
+				{
+					"parent": "cafee09ff5d86d8b",
+					"name": "Timer Delay On 2",
+					"factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"Delay time (ms)": {
+							"type": "int32",
+							"value": 10000
+						}
+					},
+					"events": {
+						"Out": {
+							"TransmitEvent": ["cafea42a8263f22b"],
+							"Disable": ["cafefdbf6289bd99"]
+						}
+					},
+					"outputCopying": {
+						"Out": { "OnDisarmed": ["de81c010ddfcf0e1"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe89853ae7c723",
+				{
+					"parent": "cafee09ff5d86d8b",
+					"name": "Timer Delay On 1",
+					"factory": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/logic.template?/timersimple.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"Delay time (ms)": {
+							"type": "int32",
+							"value": 1000
+						}
+					},
+					"events": { "Out": { "Poll": ["cafe55f5ae3dac3e"] } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafee99615b3c111",
+				{
+					"parent": "cafe7fb67214c5ba",
+					"name": "Cyb_StashAudio",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sName": {
+							"type": "ZString",
+							"value": "Cyb_StashAudio"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafea42a8263f22b",
+				{
+					"parent": "cafe7fb67214c5ba",
+					"name": "Cyb_EventChannelTransmitter_void_01",
+					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rChannelToken": {
+							"type": "SEntityTemplateReference",
+							"value": "cafee99615b3c111",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe7fb67214c5ba",
+				{
+					"parent": "cafe25fddc3ae82e",
+					"name": "Void_TransmitReceive",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafed7827ef2a16c",
+				{
+					"parent": "cafefdbf6289bd99",
+					"name": "VolumeSphere_NPC",
+					"factory": "[modules:/zspherevolumeentity.class].pc_entitytype",
+					"blueprint": "[modules:/zspherevolumeentity.class].pc_entityblueprint",
+					"properties": {
+						"m_mTransform": {
+							"type": "SMatrix43",
+							"value": {
+								"rotation": {
+									"x": -0.0,
+									"y": 0.0,
+									"z": -0.0
+								},
+								"position": {
+									"x": 0.0,
+									"y": 0.0,
+									"z": 0.0
+								}
+							}
+						},
+						"m_fRadius": { "type": "float32", "value": 0.5 },
+						"m_eidParent": {
+							"type": "SEntityTemplateReference",
+							"value": "de81c010ddfcf0e1"
+						}
+					}
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

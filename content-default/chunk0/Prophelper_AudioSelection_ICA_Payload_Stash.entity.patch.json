@@ -1,0 +1,68 @@
+{
+	"tempHash": "004B5CF8CE8EB296",
+	"tbluHash": "00D35759D6088574",
+	"patch": [
+		{
+			"AddEntity": [
+				"cafec62641092696",
+				{
+					"parent": "391280d21e32e6c5",
+					"name": "Stash",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe7f3b6d0ff1ac",
+				{
+					"parent": "cafef68cb3a2f368",
+					"name": "Cyb_StashAudio",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sName": {
+							"type": "ZString",
+							"value": "Cyb_StashAudio"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafef68cb3a2f368",
+				{
+					"parent": "cafee1c45f75930e",
+					"name": "Cyb_EventChannelReceiver_void_02 Destroyed",
+					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchannelreceiver_void.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rChannelToken": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe7f3b6d0ff1ac"
+						}
+					},
+					"events": {
+						"EventReceived": {
+							"StopAudioDistraction": ["391280d21e32e6c5"]
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafee1c45f75930e",
+				{
+					"parent": "cafec62641092696",
+					"name": "Void_TransmitReceive",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

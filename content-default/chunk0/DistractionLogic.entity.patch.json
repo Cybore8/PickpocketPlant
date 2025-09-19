@@ -1,0 +1,123 @@
+{
+	"tempHash": "0009E7ACD9CF461A",
+	"tbluHash": "00F895D82A47537F",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"6eab73aea60acd56",
+				{
+					"AddEventConnection": [
+						"OnFalse",
+						"TransmitEvent",
+						"cafe1e2a7eef46bc"
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"6eab73aea60acd56",
+				{
+					"AddEventConnection": [
+						"OnTrue",
+						"TransmitEvent",
+						"cafede882ea16444"
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafec700b0307458",
+				{
+					"parent": "cafede882ea16444",
+					"name": "Cyb_DistractPick_On",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sName": {
+							"type": "ZString",
+							"value": "Cyb_DistractPick_On"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafede882ea16444",
+				{
+					"parent": "cafe1e58b8eeb526",
+					"name": "Cyb_EventChannelTransmitter_On",
+					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rChannelToken": {
+							"type": "SEntityTemplateReference",
+							"value": "cafec700b0307458",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe0c4bb5a693b1",
+				{
+					"parent": "1d035e018a76ab61",
+					"name": "Pick Plant_TransmitReceive",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe315a11a17029",
+				{
+					"parent": "cafe1e2a7eef46bc",
+					"name": "Cyb_DistractPick_Off",
+					"factory": "[modules:/ztokenidentity.class].pc_entitytype",
+					"blueprint": "[modules:/ztokenidentity.class].pc_entityblueprint",
+					"properties": {
+						"m_sName": {
+							"type": "ZString",
+							"value": "Cyb_DistractPick_Off"
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1e2a7eef46bc",
+				{
+					"parent": "cafe1e58b8eeb526",
+					"name": "Cyb_EventChannelTransmitter_Off",
+					"factory": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/events/eventchannel.template?/eventchanneltransmitter_void.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_rChannelToken": {
+							"type": "SEntityTemplateReference",
+							"value": "cafe315a11a17029",
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"cafe1e58b8eeb526",
+				{
+					"parent": "cafe0c4bb5a693b1",
+					"name": "Transmit",
+					"factory": "[modules:/zentity.class].pc_entitytype",
+					"blueprint": "[modules:/zentity.class].pc_entityblueprint"
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
