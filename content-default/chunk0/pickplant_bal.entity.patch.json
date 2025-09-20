@@ -485,11 +485,7 @@
 						},
 						"m_aValues": {
 							"type": "TArray<SEntityTemplateReference>",
-							"value": [
-								"cafeb8a78bbd65d4",
-								"cafe5c1cf2a0f0ea",
-								"cafe99ef44b71c74"
-							],
+							"value": ["cafeb8a78bbd65d4", "cafe5c1cf2a0f0ea", "cafe99ef44b71c74"],
 							"postInit": true
 						}
 					},
@@ -1116,10 +1112,7 @@
 						},
 						"m_aValues": {
 							"type": "TArray<SEntityTemplateReference>",
-							"value": [
-								"cafe800187c96947",
-								"cafe92c799836f46"
-							],
+							"value": ["cafe800187c96947", "cafe92c799836f46"],
 							"postInit": true
 						}
 					}
@@ -1329,12 +1322,7 @@
 						},
 						"m_aValues": {
 							"type": "TArray<SEntityTemplateReference>",
-							"value": [
-								"cafec62787f0dc39",
-								"cafedee743d0355c",
-								"cafe8c9046d7555e",
-								"cafea1fa345f433b"
-							],
+							"value": ["cafec62787f0dc39", "cafedee743d0355c", "cafe8c9046d7555e", "cafea1fa345f433b"],
 							"postInit": true
 						}
 					},

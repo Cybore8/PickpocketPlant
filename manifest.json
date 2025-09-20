@@ -1,14 +1,12 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"id": "Cyb.PickPlant",
 	"name": "Pickpocket & Plant Mod",
 	"description": "Enables 47 to pickpocket and plant items on NPCs.",
 	"authors": ["Cyb"],
-	"contentFolders": [
-		"content-default"
-	],
-	"frameworkVersion": "2.33.24",
+	"contentFolders": ["content-default"],
+	"frameworkVersion": "2.33.27",
 	"options": [
 		{
 			"name": "Easier Timing",
@@ -28,7 +26,7 @@
 			},
 			"localisation": {
 				"english": {
-				"UI_CYB_PICKA": "Pickpocket"
+					"UI_CYB_PICKA": "Pickpocket"
 				}
 			}
 		},
@@ -43,7 +41,7 @@
 			},
 			"localisation": {
 				"english": {
-				"UI_CYB_PICKA": "Swipe"
+					"UI_CYB_PICKA": "Swipe"
 				}
 			}
 		},
@@ -58,7 +56,7 @@
 			},
 			"localisation": {
 				"english": {
-				"UI_CYB_PICKA": "Steal"
+					"UI_CYB_PICKA": "Steal"
 				}
 			}
 		},
@@ -73,7 +71,7 @@
 			},
 			"localisation": {
 				"english": {
-				"UI_CYB_PLANTA": "Plant"
+					"UI_CYB_PLANTA": "Plant"
 				}
 			}
 		},
@@ -88,7 +86,7 @@
 			},
 			"localisation": {
 				"english": {
-				"UI_CYB_PLANTA": "Stash"
+					"UI_CYB_PLANTA": "Stash"
 				}
 			}
 		},
@@ -103,10 +101,10 @@
 			},
 			"localisation": {
 				"english": {
-				"UI_CYB_PLANTA": "PutPocket"
+					"UI_CYB_PLANTA": "PutPocket"
 				}
 			}
 		}
 	],
-	"updateCheck": "https://github.com/Cybore8/soapbox/releases/latest/download/updates.json"
+	"updateCheck": "https://github.com/Cybore8/PickpocketPlant/releases/latest/download/updates.json"
 }

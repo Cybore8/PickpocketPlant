@@ -6,11 +6,7 @@
 			"SubEntityOperation": [
 				"2f42b1aae3ea68c6",
 				{
-					"AddEventConnection": [
-						"OnTriggered",
-						"In",
-						"cafe89853ae7c723"
-					]
+					"AddEventConnection": ["OnTriggered", "In", "cafe89853ae7c723"]
 				}
 			]
 		},
@@ -18,11 +14,7 @@
 			"SubEntityOperation": [
 				"2f42b1aae3ea68c6",
 				{
-					"AddEventConnection": [
-						"OnTriggered",
-						"TransmitEvent",
-						"cafe27e99621814c"
-					]
+					"AddEventConnection": ["OnTriggered", "TransmitEvent", "cafe27e99621814c"]
 				}
 			]
 		},
