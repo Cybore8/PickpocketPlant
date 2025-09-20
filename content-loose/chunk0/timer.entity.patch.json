@@ -1,14 +1,14 @@
 {
-	"tempHash": "000015E3D076EA64",
-	"tbluHash": "008077B51F35701E",
+	"tempHash": "00DDCC74AD917CAA",
+	"tbluHash": "003321F66074B4AB",
 	"patch": [
 		{
 			"SubEntityOperation": [
-				"443321f1a5bff493",
+				"cafe38159d757a9d",
 				{
 					"SetPropertyValue": {
 						"property_name": "Delay time (ms)",
-						"value": 300
+						"value": 1500
 					}
 				}
 			]
