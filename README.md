@@ -6,4 +6,4 @@ Enables 47 to pickpocket and plant items on NPCs.
 
 ---
 
-`Cyb.PickPlant` v1.0.0, by Cyb. This README was automatically generated from the mod's manifest.
+`Cyb.PickPlant` v1.0.1, by Cyb. This README was automatically generated from the mod's manifest.
